@@ -278,12 +278,7 @@ switch ($selection3)
      
      }
 ##############################################################################################################
-# Get Location ID
-			write-host "Gettering Tenant location ID..." -ForegroundColor Cyan
-			start-sleep -s 2
-			$Lid = Get-CsOnlineLisLocation | Sort-Object LocationID | select-object -ExpandProperty LocationID
-			write-host "Tenant LocationID is: $Lid" -ForegroundColor White -BackgroundColor Black
-			Start-Sleep -s 2
+
 
 			# Getting CSV Information
 			write-host "Please select and import the CSV File from your device:" -ForegroundColor Cyan
@@ -329,10 +324,10 @@ switch ($selection3)
 
 			start-sleep -s 3
 ##############################################################################################################
-# Configuring Teams Voice Policy
-$PolicyID1 = $(Write-Host "Enter the Teams voice calling policy name. Example: " -NoNewLine) + $(Write-Host """" -NoNewline) +$(Write-Host "Prevent2ndCall" -ForegroundColor Yellow -NoNewline; Read-Host """")
+# Configuring Mailboxes
+
 start-sleep -s 3			
-write-host "Setting the Policy..." -ForegroundColor cyan 
+write-host "Creating shared Mailboxes..." -ForegroundColor cyan 
 foreach($user in $users)
 			{
 				try
@@ -350,5 +345,5 @@ foreach($user in $users)
 				
 			}
 start-sleep -s 3
-Write-Host "Policy for the users is set!" -ForegroundColor Green -BackgroundColor Black
+Write-Host "Tasks Done!" -ForegroundColor Green -BackgroundColor Black
 pause
