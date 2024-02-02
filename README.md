@@ -8,3 +8,5 @@ For each Script are CSV. Files as preparation needed. The CSV Files should look 
 
 *"Mailbox","UPN","Permission","AssignedTo","MailboxType"* -> For the Script: **SetMailboxPermissions.ps1**
 
+*"UserAccount","PSTName"* -> For the Script: **CreateMultiplePSTs.ps1**
+
