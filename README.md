@@ -10,3 +10,6 @@ For each Script are CSV. Files as preparation needed. The CSV Files should look 
 
 *"UserAccount","PSTName"* -> For the Script: **CreateMultiplePSTs.ps1**
 
+
+
+*"Name","SMTPold","SMTPnew"*-> For the Script: **ExternalSMTPforwarding.ps1**
