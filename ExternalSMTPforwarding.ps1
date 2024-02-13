@@ -252,7 +252,7 @@ write-host ""
 $selection3 =  Read-Host "Would you like to connect to Microsoft Exchange online using this Script?? [Y] for yes / [N] for no or already connected." 
 switch ($selection3)
        { 'Y' {
-            # Load Microsoft Teams PowerShell Module
+            # Load Microsoft Exchange online PowerShell Module
             write-host "Connectig Exchange online" -ForegroundColor Magenta
             Start-Sleep -s 5
                 if (Get-Module -ListAvailable -Name ExchangeOnlineManagement) {
