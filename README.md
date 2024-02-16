@@ -13,3 +13,5 @@ For each Script are CSV. Files as preparation needed. The CSV Files should look 
 *"Name","SMTPold","SMTPnew"* -> For the Script: **ExternalSMTPforwarding.ps1**
 
 *"UPN","ExternalMessage","InternalMessage","StartDate","EndDate"* -> For the Script: **SetOOFforMultipleUsers.ps1** -> -> -> For StartTime and EndTime use the following format: 7/15/2018 17:00:00
+
+*"Name","UPN"* -> For the Script: **DisableServices.ps1**
