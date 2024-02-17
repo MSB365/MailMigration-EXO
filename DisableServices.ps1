@@ -288,7 +288,7 @@ switch ($selection3)
 			Write-Host "*****************************************************" -ForegroundColor Yellow -BackgroundColor Black
 			Write-Host "NOTE!" -ForegroundColor Yellow -BackgroundColor Black
 			Write-Host "The following information are needed in the CSV file:" -ForegroundColor White -BackgroundColor black
-			Write-Host '"Name","SMTPold"' -ForegroundColor Gray -BackgroundColor Black
+			Write-Host '"Name","UPN"' -ForegroundColor Gray -BackgroundColor Black
 			Write-Host "*****************************************************" -ForegroundColor Yellow -BackgroundColor Black
 			Start-Sleep -s 6
 			$File = New-Object System.Windows.Forms.OpenFileDialog
@@ -332,11 +332,11 @@ foreach($user in $users)
 			{
 				try
 				{
-                    Set-CASMailbox -Identity $user.SMTPold -MAPIEnabled $False
+                    Set-CASMailbox -Identity $user.UPN -MAPIEnabled $False
                     Write-Host "MAPI for the User $($user.Name) disabled!" -ForegroundColor Green
-                    Set-CASMailbox -Identity $user.SMTPold -OWAEnabled $False
+                    Set-CASMailbox -Identity $user.UPN -OWAEnabled $False
                     Write-Host "Outlook Web Service (OWA) for the User $($user.Name) disabled!" -ForegroundColor Green
-                    Set-CASMailbox -Identity $user.SMTPold -ActiveSyncEnabled $False
+                    Set-CASMailbox -Identity $user.UPN -ActiveSyncEnabled $False
 					Write-Host "ActiveSync for the User $($user.Name) disabled!" -ForegroundColor Green
 					Start-Sleep -s 1
 				}
