@@ -1,17 +1,54 @@
-# MailMigration-EXO
+# Mail Migration EXO Scripts
+his script is a summary of several PowerShell scripts that are useful for BULK tasks in Exchange Online.
 
-Four Scripts that can help for Exchange Migration Tasks.
-For each Script are CSV. Files as preparation needed. The CSV Files should look like the following example:
+## Prerequisites CSV
 
-*"Name","Alias","NewName","NewAlias"* -> For the Scripts: **CreateMultipleSharedMailboxes.ps1 CreateMultipleEquipmentMailboxes.ps1 CreateMultipleRoomMailboxes.ps1**
+Create Multiple Shared Mailboxes
+Create Multiple Equipment Mailboxes
+Create Multiple Room Mailboxes
 
+"Name","Alias","NewName","NewAlias"
 
-*"Mailbox","UPN","Permission","AssignedTo","MailboxType"* -> For the Script: **SetMailboxPermissions.ps1**
+--------------------------------------------
 
-*"UserAccount","PSTName"* -> For the Script: **CreateMultiplePSTs.ps1**
+Set Shared Mailbox permissions
 
-*"Name","SMTPold","SMTPnew"* -> For the Script: **ExternalSMTPforwarding.ps1**
+"Mailbox","UPN","Permission","AssignedTo","MailboxType"
 
-*"UPN","ExternalMessage","InternalMessage","StartDate","EndDate"* -> For the Script: **SetOOFforMultipleUsers.ps1** -> -> -> For StartTime and EndTime use the following format: 7/15/2018 17:00:00
+--------------------------------------------
 
-*"Name","UPN"* -> For the Script: **DisableServices.ps1**
+Create Multiple PST exports
+
+"UserAccount","PSTName"
+
+--------------------------------------------
+
+Set External SMTP forwardings for multiple Users
+
+"Name","SMTPold","SMTPnew"
+
+--------------------------------------------
+
+Set OOF Message for multiple Users
+
+"UPN","ExternalMessage","InternalMessage","StartDate","EndDate"
+For StartTime and EndTime use the following format: 7/15/2018 17:00:00
+
+--------------------------------------------
+
+Disable OWA, ActiveSync and MAPI for multiple Users
+
+"Name","UPN"
+
+--------------------------------------------
+
+Convert Mail User to Remote Mailbox
+
+This script requires the Active Directory and ExchangePowerShell modules to be installed on the machine running the script.
+The modules it self will be loaded when the script is executed.
+
+"Samaccountname","Mail"
+
+## Author
+Drago Petrovic
+MSB365 Blog (https://www.msb365.blog)
